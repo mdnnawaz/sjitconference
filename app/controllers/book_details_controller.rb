@@ -29,7 +29,7 @@ class BookDetailsController < ApplicationController
     @book_detail.user_id = current_user.id
     respond_to do |format|
       if @book_detail.save
-        format.html { redirect_to @book_detail, notice: 'Book detail was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Book detail was successfully created.' }
         format.json { render :show, status: :created, location: @book_detail }
       else
         format.html { render :new }

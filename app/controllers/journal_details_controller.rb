@@ -30,7 +30,7 @@ class JournalDetailsController < ApplicationController
     respond_to do |format|
       if @journal_detail.save
         @journal_detail.save 
-        format.html { redirect_to @journal_detail, notice: 'Journal detail was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Journal detail was successfully created.' }
         format.json { render :show, status: :created, location: @journal_detail }
       else
         format.html { render :new }

@@ -30,7 +30,7 @@ class ConsultingProjectsController < ApplicationController
     @consulting_project.user_id = current_user.id
     respond_to do |format|
       if @consulting_project.save
-        format.html { redirect_to @consulting_project, notice: 'Consulting project was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Consulting project was successfully created.' }
         format.json { render :show, status: :created, location: @consulting_project }
       else
         format.html { render :new }

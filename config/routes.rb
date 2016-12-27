@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root 'index#index'
+
   get 'index/journals'
 
   get 'index/funded_projects'
