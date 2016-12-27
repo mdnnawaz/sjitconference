@@ -1,0 +1,36 @@
+ <div class="container"> 
+  <p id="notice"><%= notice %></p>
+
+  <h1>Conference Details</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Academic year</th>
+        <th>Sem</th>
+        <th>Conference name</th>
+        <th>Conference organizer</th>
+        <th>Conference type</th>
+        <th>ISBN</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @conference_details.each do |conference_detail| %>
+        <tr>
+          <td><%= conference_detail.academic_year %></td>
+          <td><%= conference_detail.sem %></td>
+          <td><%= conference_detail.conference_name %></td>
+          <td><%= conference_detail.conference_organizer %></td>
+          <td><%= conference_detail.conference_type %></td>
+          <td><%= conference_detail.isbn %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= button_to 'New Record', new_conference_detail_path, class: 'button-primary', method: 'get' %>
+</div>

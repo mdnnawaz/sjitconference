@@ -1,0 +1,8 @@
+<div class="container">	
+	<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+	<h5 align="center">Enter the Details of your Published Paper</h5>
+
+	<%= render 'form', journal_detail: @journal_detail %>
+
+	<%= link_to 'Back', journal_details_path %>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>St. Joseph's Institute of Technology | Research & Development </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<navbar class="primary" style="background-color:#F3F3F3">
+      <div class="row" style="background-color:#F3F3F3">
+           <center><%= image_tag "header.png" , height: "165px", width: "700px", style: 'background-color:#F3F3F3'%></center>
+      </div>
+    </navbar>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>

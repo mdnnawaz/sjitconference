@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  academic_year: MyString
+  sem: MyString
+  journal_name: MyString
+  issn_no: MyString
+  impact_factor: 1.5
+  journal_type: MyString
+  paper_title: MyString
+  1_author_name: MyString
+  1_dept: MyString
+  1_organization: MyString
+  1_others: MyString
+  2_author_name: MyString
+  2_dept: MyString
+  2_organization: MyString
+  2_others: MyString
+  vol_no: MyString
+  issue_no: MyString
+  page_no: MyString
+  date_submitted: MyString
+  date_acceptance: MyString
+  date_publish: MyString
+  paper_abstract: MyText
+  user: one
+
+two:
+  academic_year: MyString
+  sem: MyString
+  journal_name: MyString
+  issn_no: MyString
+  impact_factor: 1.5
+  journal_type: MyString
+  paper_title: MyString
+  1_author_name: MyString
+  1_dept: MyString
+  1_organization: MyString
+  1_others: MyString
+  2_author_name: MyString
+  2_dept: MyString
+  2_organization: MyString
+  2_others: MyString
+  vol_no: MyString
+  issue_no: MyString
+  page_no: MyString
+  date_submitted: MyString
+  date_acceptance: MyString
+  date_publish: MyString
+  paper_abstract: MyText
+  user: two

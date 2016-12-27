@@ -1,0 +1,112 @@
+<%= form_for(book_detail) do |f| %>
+  <% if book_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book_detail.errors.count, "error") %> prohibited this book_detail from being saved:</h2>
+
+      <ul>
+      <% book_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="field">
+      <%= f.label "Book Title" %>
+      <%= f.text_field :book_title, placeholder: "Title", size: 120 %>
+    </div>
+  </div>
+
+  <div class="row">
+  
+    <div class="four columns">
+      <label>1<sup>st</sup> Author Name</label>
+      <%= f.text_field :one_author_name, placeholder: '1st Author Name' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Designation" %>
+      <%= f.text_field :one_designation, placeholder: 'Designation' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Organization" %>
+      <%= f.text_field :one_organization, placeholder: 'Organization' %>
+    </div>
+
+  </div>
+
+  <div class="row">
+  
+    <div class="four columns">
+      <label>2<sup>nd</sup> Author Name</label>
+      <%= f.text_field :two_author_name, placeholder: '1st Author Name' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Designation" %>
+      <%= f.text_field :two_designation, placeholder: 'Designation' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Organization" %>
+      <%= f.text_field :two_organization, placeholder: 'Organization' %>
+    </div>
+
+  </div>
+
+  <div class="row">
+  
+    <div class="four columns">
+      <label>3<sup>rd</sup> Author Name</label>
+      <%= f.text_field :three_author_name, placeholder: '1st Author Name' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Designation" %>
+      <%= f.text_field :three_designation, placeholder: 'Designation' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Organization" %>
+      <%= f.text_field :three_organization, placeholder: 'Organization' %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label "Publisher Name", "Publisher Name" %>
+    <%= f.text_field :publisher_name, size: 120, placeholder: 'Publisher Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Publisher Address", "Publisher Address" %>
+    <%= f.text_area :publisher_address, size: '120x90' %>
+  </div>
+  <div class="row">
+    <div class="field three columns">
+      <%= f.label :isbn, "ISBN Number" %>
+      <%= f.text_field :isbn , placeholder: 'ISBN Number'%>
+    </div>
+
+    <div class="field three columns">
+      <%= f.label :one_publication, "First Publication" %>
+      <%= f.text_field :one_publication, placeholder: "YYYY" %>
+    </div>
+
+    <div class="field three columns">
+      <%= f.label :edition_number, "Latest Edition" %>
+      <%= f.text_field :edition_number, placeholder: 'Edition' %>
+    </div>
+
+    <div class="field three columns">
+      <%= f.label :reprint_year, "Latest Reprint" %>
+      <%= f.text_field :reprint_year, placeholder: 'YYYY' %>
+    </div>
+  </div>
+
+  <div class="actions" align="center">
+    <%= f.submit "Save", class: 'button-primary' %>
+  </div>
+<% end %>

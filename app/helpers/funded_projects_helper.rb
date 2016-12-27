@@ -1,0 +1,2 @@
+module FundedProjectsHelper
+end

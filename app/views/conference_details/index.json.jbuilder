@@ -1,0 +1,1 @@
+json.array! @conference_details, partial: 'conference_details/conference_detail', as: :conference_detail

@@ -1,0 +1,2 @@
+json.extract! conference_detail, :id, :academic_year, :sem, :conference_name, :conference_organizer, :address, :city, :conference_type, :isbn, :paper_title, :one_author_name, :one_department, :one_organization, :one_others, :volume_number, :issue_number, :page_start, :page_end, :date_submission, :date_acceptance, :date_published, :paper_abstract, :user_id, :created_at, :updated_at
+json.url conference_detail_url(conference_detail, format: :json)

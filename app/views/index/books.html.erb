@@ -1,0 +1,25 @@
+ <div class="container"> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Book title</th>
+        <th>Publisher name</th>
+        <th>Publisher address</th>
+        <th>ISBN</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%if @book_details %>
+        <% @book_details.each do |book_detail| %>
+          <tr>
+            <td><%= book_detail.book_title %></td>
+            <td><%= book_detail.publisher_name %></td>
+            <td><%= book_detail.publisher_address %></td>
+            <td><%= book_detail.isbn %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,32 @@
+ <div class="container"> 
+  <p id="notice"><%= notice %></p>
+
+  <h1>Consulting Projects</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Project title</th>
+        <th>Consulting name</th>
+        <th>Principle name</th>
+        <th>Principle company</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @consulting_projects.each do |consulting_project| %>
+        <tr>
+          <td><%= consulting_project.project_title %></td>
+          <td><%= consulting_project.consulting_name %></td>
+          <td><%= consulting_project.principle_name %></td>
+          <td><%= consulting_project.principle_company %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= button_to 'New Consulting Project', new_consulting_project_path, method: 'get', class: 'button-primary' %>
+</div>

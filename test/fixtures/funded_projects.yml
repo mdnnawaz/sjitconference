@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_title: MyString
+  about_project: MyText
+  funding_agency: MyString
+  sub_agency: MyString
+  address: MyText
+  project_value: MyString
+  project_submitted_date: MyString
+  sanctioned_amount: MyString
+  total_amount_recieved: MyString
+  date_of_completion: MyString
+  remarks: MyText
+
+two:
+  project_title: MyString
+  about_project: MyText
+  funding_agency: MyString
+  sub_agency: MyString
+  address: MyText
+  project_value: MyString
+  project_submitted_date: MyString
+  sanctioned_amount: MyString
+  total_amount_recieved: MyString
+  date_of_completion: MyString
+  remarks: MyText

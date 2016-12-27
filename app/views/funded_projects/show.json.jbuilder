@@ -1,0 +1,1 @@
+json.partial! "funded_projects/funded_project", funded_project: @funded_project

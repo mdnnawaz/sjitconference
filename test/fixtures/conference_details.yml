@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  academic_year: MyString
+  sem: MyString
+  conference_name: MyString
+  conference_organizer: MyString
+  address: MyText
+  city: MyString
+  conference_type: MyString
+  isbn: MyString
+  paper_title: MyString
+  one_author_name: MyString
+  one_department: MyString
+  one_organization: MyString
+  one_others: MyString
+  volume_number: MyString
+  issue_number: MyString
+  page_start: MyString
+  page_end: MyString
+  date_submission: MyString
+  date_acceptance: MyString
+  date_published: MyString
+  paper_abstract: MyText
+  user: one
+
+two:
+  academic_year: MyString
+  sem: MyString
+  conference_name: MyString
+  conference_organizer: MyString
+  address: MyText
+  city: MyString
+  conference_type: MyString
+  isbn: MyString
+  paper_title: MyString
+  one_author_name: MyString
+  one_department: MyString
+  one_organization: MyString
+  one_others: MyString
+  volume_number: MyString
+  issue_number: MyString
+  page_start: MyString
+  page_end: MyString
+  date_submission: MyString
+  date_acceptance: MyString
+  date_published: MyString
+  paper_abstract: MyText
+  user: two

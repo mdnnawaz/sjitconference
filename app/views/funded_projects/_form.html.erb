@@ -1,0 +1,72 @@
+<%= form_for(funded_project) do |f| %>
+  <% if funded_project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(funded_project.errors.count, "error") %> prohibited this funded_project from being saved:</h2>
+
+      <ul>
+      <% funded_project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :project_title,"Title of the Proposal/Project Work" %>
+    <%= f.text_field :project_title, size: 120, placeholder: "Project Title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :about_project, "About the Project" %>
+    <%= f.text_area :about_project, size: '120x30' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :funding_agency, "Name of the Funding Agency" %>
+    <%= f.text_field :funding_agency, size: 120, placeholder: "Funding Agency" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_agency, "Name of the Sub Agency" %>
+    <%= f.text_field :sub_agency, size: 120, placeholder: "Sub Agency" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address, "Address"%>
+    <%= f.text_area :address, size: '120x30' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project_value, "Project Value (In Rs)"  %>
+    <%= f.text_field :project_value, size: 120, placeholder: "Project Value" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project_submitted_date, "Project Submitted Date" %>
+    <%= f.text_field :project_submitted_date, size: 120, placeholder: "DD/MM/YYYY" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sanctioned_amount, "Sanctioned Amount (In Rs)" %>
+    <%= f.text_field :sanctioned_amount, size: 120, placeholder: "Sanctioned Amount" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :total_amount_recieved, "Total Amount Recieved" %>
+    <%= f.text_field :total_amount_recieved, size: 120, placeholder: "Amount Recieved" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_of_completion, "Completion Date" %>
+    <%= f.text_field :date_of_completion, size: 120, placeholder: "DD/MM/YYYY" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :remarks, "Remarks" %>
+    <%= f.text_area :remarks, size: '120x30' %>
+  </div>
+
+  <div class="actions" align="center">
+    <%= f.submit "Submit", class: "button-primary" %>
+  </div>
+<% end %>

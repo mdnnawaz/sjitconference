@@ -1,0 +1,37 @@
+<div class="container"> 
+  <p id="notice"><%= notice %></p>
+
+  <h1>Journal Details</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Academic year</th>
+        <th>Sem</th>
+        <th>Journal name</th>
+        <th>Issn no</th>
+        <th>Impact factor</th>
+        <th>Journal type</th>
+        <th>Paper title</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @journal_details.each do |journal_detail| %>
+        <tr>
+          <td><%= journal_detail.academic_year %></td>
+          <td><%= journal_detail.sem %></td>
+          <td><%= journal_detail.journal_name %></td>
+          <td><%= journal_detail.issn_no %></td>
+          <td><%= journal_detail.impact_factor %></td>
+          <td><%= journal_detail.journal_type %></td>
+          <td><%= journal_detail.paper_title %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= button_to 'New Record', new_journal_detail_path, class: 'button-primary', method: 'get' %>
+</div>

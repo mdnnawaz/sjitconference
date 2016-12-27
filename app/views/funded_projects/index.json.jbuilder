@@ -1,0 +1,1 @@
+json.array! @funded_projects, partial: 'funded_projects/funded_project', as: :funded_project

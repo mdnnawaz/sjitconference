@@ -1,0 +1,201 @@
+<%= form_for(conference_detail) do |f| %>
+  <% if conference_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conference_detail.errors.count, "error") %> prohibited this conference_detail from being saved:</h2>
+
+      <ul>
+      <% conference_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    
+    <div class="six columns">
+      <%= f.label "Academic Year" %>
+      <% years_array = ['--- Select Academic Year ---','2011-2012','2012-2013','2013-2014','2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021','2021-2022','2022-2023','2023-2024','2024-2025'] %>
+      <%= f.select :academic_year, options_for_select(years_array, disabled: years_array[0], selected: years_array[0] ), width: '30px' %>
+    </div>
+
+    <div class="six columns">
+      <%= f.label "Semester" %>
+      <% sem_details = ['--- Select Semester ----','ODD', 'EVEN'] %>
+      <%= f.select :sem, options_for_select(sem_details), disabled: sem_details[0], selected: sem_details[0] %>
+    </div>
+
+  </div>
+
+
+  <div class="field">
+    <%= f.label "Name of the Conference" %>
+    <%= f.text_field :conference_name, placeholder: 'Conference Name', size: 120 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Conference Organizer" %>
+    <%= f.text_field :conference_organizer, placeholder: 'Organizer', size: 120 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_area :address, size: '120x90' %>
+  </div>
+
+
+  <div class="row">
+    <div class="field four columns">
+      <%= f.label "City" %>
+      <%= f.text_field :city, placeholder: 'city', size: 30 %>
+    </div>
+
+    <div class="field four columns">
+      <%= f.label "Conference Type" %>
+      <% type = ['--- Select Journal Type ---', 'National', 'International'] %>
+      <%= f.select :conference_type, options_for_select(type, disabled: type[0], selected: type[0]), size: 30 %>
+    </div>
+
+    <div class="field four columns">
+      <%= f.label :isbn %>
+      <%= f.text_field :isbn, placeholder: 'ISBN Number', size: 30 %>
+    </div>
+  </div>
+
+
+  <div>
+    <%= f.label "Paper Title" %>
+    <%= f.text_field :paper_title, placeholder: "Paper Title", size: 120 %>
+  </div>
+
+  <div class="row">
+  
+    <div class="three columns">
+      <label>1<sup>st</sup> Author Name</label>
+      <%= f.text_field :one_author_name, placeholder: '1st Author Name' %>
+    </div>
+
+    <div class="three columns">
+      <%= f.label "Department" %>
+      <%= f.text_field :one_department, placeholder: 'Department' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Organization" %>
+      <% org = ["--- Select Organization ---","St. Joseph's Institute of Technology","Others"] %>
+      <%= f.select :one_organization, options_for_select(org, disabled: org[0], selected: org[0]) %>
+    </div>
+
+    <div class="two columns">
+      <%= f.label "If Others" %>
+      <%= f.text_field :one_others, placeholder: 'Organization, If Others' %>
+    </div>
+  </div>
+
+  <br>
+  
+  <div class="row">
+  
+    <div class="three columns">
+      <label>2<sup>nd</sup> Author Name</label>
+      <%= f.text_field :two_author_name, placeholder: '2nd Author Name' %>
+    </div>
+
+    <div class="three columns">
+      <%= f.label "Department" %>
+      <%= f.text_field :two_department, placeholder: 'Department' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Organization" %>
+      <% org = ["--- Select Organization ---","St. Joseph's Institute of Technology","Others"] %>
+      <%= f.select :two_organization, options_for_select(org, disabled: org[0], selected: org[0]) %>
+    </div>
+
+    <div class="two columns">
+      <%= f.label "If Others" %>
+      <%= f.text_field :two_others, placeholder: 'Organization, If Others' %>
+    </div>
+  </div>
+
+  <br>
+
+   <div class="row">
+  
+    <div class="three columns">
+      <label>3<sup>rd</sup> Author Name</label>
+      <%= f.text_field :three_author_name, placeholder: '3rd Author Name' %>
+    </div>
+
+    <div class="three columns">
+      <%= f.label "Department" %>
+      <%= f.text_field :three_department, placeholder: 'Department' %>
+    </div>
+
+    <div class="four columns">
+      <%= f.label "Organization" %>
+      <% org = ["--- Select Organization ---","St. Joseph's Institute of Technology","Others"] %>
+      <%= f.select :three_organization, options_for_select(org, disabled: org[0], selected: org[0]) %>
+    </div>
+
+    <div class="two columns">
+      <%= f.label "If Others" %>
+      <%= f.text_field :three_others, placeholder: 'Organization, If Others' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field three columns">
+      <%= f.label :volume_number %>
+      <%= f.text_field :volume_number, placeholder: 'Volume Number' %>
+    </div>
+
+    <div class="field three columns">
+      <%= f.label :issue_number %>
+      <%= f.text_field :issue_number, placeholder: 'Issue Number' %>
+    </div>
+
+    <div class="field three columns">
+      <%= f.label "Start Page" %>
+      <%= f.text_field :page_start %>
+    </div>
+
+    <div class="field three columns">
+      <%= f.label "End Page" %>
+      <%= f.text_field :page_end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field four columns">
+      <%= f.label "Date of Submission" %>
+      <%= f.text_field :date_submission, placeholder: "MM/YY" %>
+    </div>
+
+    <div class="field four columns">
+      <%= f.label "Date of Acceptance" %>
+      <%= f.text_field :date_acceptance, placeholder: "MM/YY" %>
+    </div>
+
+    <div class="field four columns">
+      <%= f.label "Date Published" %>
+      <%= f.text_field :date_published, placeholder: "MM/YY" %>
+    </div>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :paper_abstract %>
+    <%= f.text_area :paper_abstract, size: '120x90' %>
+  </div>
+
+  
+  <div class="row">
+      <%= f.label :paper, "Upload Paper" %>
+      <%= f.file_field :paper %>
+  </div>
+
+
+  <div class="actions" align="center">
+    <%= f.submit "Submit", class: 'button-primary'%>
+  </div>
+<% end %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project title:</strong>
+  <%= @funded_project.project_title %>
+</p>
+
+<p>
+  <strong>About project:</strong>
+  <%= @funded_project.about_project %>
+</p>
+
+<p>
+  <strong>Funding agency:</strong>
+  <%= @funded_project.funding_agency %>
+</p>
+
+<p>
+  <strong>Sub agency:</strong>
+  <%= @funded_project.sub_agency %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @funded_project.address %>
+</p>
+
+<p>
+  <strong>Project value:</strong>
+  <%= @funded_project.project_value %>
+</p>
+
+<p>
+  <strong>Project submitted date:</strong>
+  <%= @funded_project.project_submitted_date %>
+</p>
+
+<p>
+  <strong>Sanctioned amount:</strong>
+  <%= @funded_project.sanctioned_amount %>
+</p>
+
+<p>
+  <strong>Total amount recieved:</strong>
+  <%= @funded_project.total_amount_recieved %>
+</p>
+
+<p>
+  <strong>Date of completion:</strong>
+  <%= @funded_project.date_of_completion %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @funded_project.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_funded_project_path(@funded_project) %> |
+<%= link_to 'Back', funded_projects_path %>

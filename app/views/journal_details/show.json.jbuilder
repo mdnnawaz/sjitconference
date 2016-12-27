@@ -1,0 +1,1 @@
+json.partial! "journal_details/journal_detail", journal_detail: @journal_detail

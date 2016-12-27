@@ -1,0 +1,148 @@
+<div class="container">
+	<div class="row">
+		<div class="eight columns">
+			<h3>Journals</h3>
+		</div>
+		<div align="right">	
+			<%= link_to "Add Journal Details", new_journal_detail_path, class: "button button-primary" %>
+		</div>
+	</div>
+	<ol>
+		<% @journal_details.each do |journal_detail| %>
+	        <div class="row">	
+	        	<li>
+
+	        		<%= journal_detail.one_author_name %>
+	        		<% if journal_detail.three_author_name == "" %>
+	        			and <%= journal_detail.two_author_name %>
+	        		<% else %>
+	        			, <%= journal_detail.two_author_name %>
+	        			 and
+	        			<%= journal_detail.three_author_name %>
+	        		<% end %>
+	        		, <b>"<%= journal_detail.paper_title %>"</b>,
+	        		<%= journal_detail.journal_name %>
+	        		<b>ISSN NO:</b> <%= journal_detail.issn_no %>
+	        		<b>VOL NO:</b> <%= journal_detail.vol_no %>
+	        		<b>ISSUE NO:</b> <%= journal_detail.issue_no %>
+	        		<%= link_to "Download Paper", journal_detail.paper.url %> 
+	        			<%# text = journal_detail.one_author_name.to_s + ", " + journal_detail.two_author_name.to_s + ", " + journal_detail.three_author_name.to_s + " " + journal_detail.paper_title.to_s + " " + journal_detail.journal_name.to_s + " " + journal_detail.issn_no.to_s + " " + journal_detail.vol_no.to_s %>
+	        			<%# text %>
+	        	</li>
+	        </div>
+      	<% end %>
+	</ol>
+	<div class="row">
+		<div class="eight columns">
+			<h3>Conferences</h3>
+		</div>
+		<div align="right">	
+			<%= link_to "Add Conference Details", new_conference_detail_path, class: "button button-primary" %>
+		</div>
+	</div>
+	<ol>
+		<% @conference_details.each do |conference_detail| %>
+	        <div class="row">	
+	        	<li >
+						<%= conference_detail.one_author_name %>
+		        		<% if conference_detail.three_author_name == "" %>
+		        			and <%= conference_detail.two_author_name %>
+		        		<% else %>
+		        			, <%= conference_detail.two_author_name %>
+		        			 and
+		        			<%= conference_detail.three_author_name %>
+		        		<% end %>
+		        		, <b><%= conference_detail.paper_title %></b>,
+		        		<%= conference_detail.conference_name %>,
+		        		<%= conference_detail.conference_organizer %>
+		        		<%= link_to "Download Paper", conference_detail.paper.url %>
+	        			<%# text = journal_detail.one_author_name.to_s + ", " + journal_detail.two_author_name.to_s + ", " + journal_detail.three_author_name.to_s + ", " + journal_detail.paper_title.to_s + "," + journal_detail.journal_name.to_s + " " + journal_detail.issn_no.to_s + " " + journal_detail.vol_no.to_s %>
+	        			<%# text %>	
+	        	</li>
+	        </div>
+      	<% end %>
+	</ol>
+
+	<div class="row">
+		<div class="eight columns">
+			<h3>Books Published</h3>
+		</div>
+		<div align="right">	
+			<%= link_to "Add Book Details", new_book_detail_path, class: "button button-primary" %>
+		</div>
+	</div>
+	<ol>
+		<% @book_details.each do |book_detail| %>
+	        <div class="row">	
+	        	<li >
+						<b><%= book_detail.book_title %></b>,
+						written by:
+						<%= book_detail.one_author_name %>
+		        		<% if book_detail.three_author_name == "" %>
+		        			and <%= book_detail.two_author_name %>,
+		        		<% else %>
+		        			, <%= book_detail.two_author_name %>
+		        			 and
+		        			<%= book_detail.three_author_name %>
+		        		<% end %>
+		        		Published by: <%= book_detail.publisher_name %>,
+		        		ISBN No.: <%= book_detail.isbn %> 
+
+	        			<%# text = journal_detail.one_author_name.to_s + ", " + journal_detail.two_author_name.to_s + ", " + journal_detail.three_author_name.to_s + ", " + journal_detail.paper_title.to_s + "," + journal_detail.journal_name.to_s + " " + journal_detail.issn_no.to_s + " " + journal_detail.vol_no.to_s %>
+	        			<%# text %>	
+	        	</li>
+	        </div>
+      	<% end %>
+	</ol>
+
+	<div class="row">
+		<div class="eight columns">
+			<h3>Funded Projects</h3>
+		</div>
+		<div align="right">	
+			<%= link_to "Add Funded Projects Details", new_funded_project_path, class: "button button-primary" %>
+		</div>
+	</div>
+	<ol>
+		<% @funded_projects.each do |funded_project| %>
+	        <div class="row">	
+	        	<li >
+						<b><%= funded_project.project_title %></b>,
+						Funded by:
+						<%= funded_project.funding_agency %>
+		        		Sanctioned Amount: Rs.<%= funded_project.sanctioned_amount %>
+
+	        			<%# text = journal_detail.one_author_name.to_s + ", " + journal_detail.two_author_name.to_s + ", " + journal_detail.three_author_name.to_s + ", " + journal_detail.paper_title.to_s + "," + journal_detail.journal_name.to_s + " " + journal_detail.issn_no.to_s + " " + journal_detail.vol_no.to_s %>
+	        			<%# text %>	
+	        	</li>
+	        </div>
+      	<% end %>
+	</ol>
+
+
+	<div class="row">
+		<div class="eight columns">
+			<h3>Consulting Pojects</h3>
+		</div>
+		<div align="right">	
+			<%= link_to "Add Consulting Poject Detail", new_consulting_project_path, class: "button button-primary" %>
+		</div>
+	</div>
+	<ol>
+		<% @consulting_projects.each do |consulting_project| %>
+	        <div class="row">	
+	        	<li >
+						<b><%= consulting_project.project_title %></b>,
+						Consulting Agency:
+						<%= consulting_project.consulting_name %>,
+		        		Principle Investigator: <%= consulting_project.principle_name %>
+
+	        			<%# text = journal_detail.one_author_name.to_s + ", " + journal_detail.two_author_name.to_s + ", " + journal_detail.three_author_name.to_s + ", " + journal_detail.paper_title.to_s + "," + journal_detail.journal_name.to_s + " " + journal_detail.issn_no.to_s + " " + journal_detail.vol_no.to_s %>
+	        			<%# text %>	
+	        	</li>
+	        </div>
+      	<% end %>
+	</ol>
+
+
+</div>

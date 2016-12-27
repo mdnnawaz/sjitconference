@@ -1,0 +1,312 @@
+<%= form_for(consulting_project) do |f| %>
+  <% if consulting_project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(consulting_project.errors.count, "error") %> prohibited this consulting_project from being saved:</h2>
+
+      <ul>
+      <% consulting_project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :project_title, "Project Title" %>
+    <%= f.text_field :project_title, placeholder: "Title of the Project", size: 120 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :consulting_name, "Name of consulting" %>
+    <%= f.text_field :consulting_name, placeholder: "Consulting Name", size: 120 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_area :address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :contact_person,"Contact Person" %>
+      <%= f.text_field :contact_person, placeholder: "Contact Person", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :mobile, "Mobile/Phone Number" %>
+      <%= f.text_field :mobile, placeholder: "Mobile/Phone Number",size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :principle_name, "Principle Investigator Name" %>
+    <%= f.text_field :principle_name, placeholder: "Principle Investigator Name", size: 120 %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :principle_designation, "Designation" %>
+      <%= f.text_field :principle_designation, placeholder: "Designation", size: 50  %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :principle_company, "Company" %>
+      <%= f.text_field :principle_company, placeholder: "Company", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :principle_address, "Address" %>
+    <%= f.text_area :principle_address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :principle_mobile, "Mobile Number" %>
+      <%= f.text_field :principle_mobile, size: 50, placeholder: 'Mobile Number' %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :principle_mail_id, "E-Mail Id" %>
+      <%= f.text_field :principle_mail_id, size: 50, placeholder: 'E-Mail Id' %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :co_investigator_name, "Co-Investigator Name" %>
+    <%= f.text_field :co_investigator_name, size: 120, placeholder: "Co-Investigator Name" %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :co_investigator_designation, "Designation" %>
+      <%= f.text_field :co_investigator_designation,  placeholder: "Designation", size: 50   %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :co_investigator_company, "Company" %>
+      <%= f.text_field :co_investigator_company, placeholder: "Company", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :co_investigator_address, "Address" %>
+    <%= f.text_area :co_investigator_address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :co_investigator_mobile, "Mobile" %>
+      <%= f.text_field :co_investigator_mobile, placeholder: 'Mobile', size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :co_investigator_mail_id, "E-Mail Id" %>
+      <%= f.text_field :co_investigator_mail_id, placeholder: 'Mail', size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf1_name, "JRF 1 Name" %>
+    <%= f.text_field :jrf1_name, placeholder: "JRF 1 Name", size: 120 %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf1_designation, "Designation" %>
+      <%= f.text_field :jrf1_designation, placeholder: "Designation", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf1_organizer, "Organization" %>
+      <%= f.text_field :jrf1_organizer, placeholder: "Organization", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf1_address, "Address" %>
+    <%= f.text_area :jrf1_address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf1_mobile, "Mobile Number" %>
+      <%= f.text_field :jrf1_mobile, placeholder: "Mobile Number", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf1_mail_id, "E-Mail Id" %>
+      <%= f.text_field :jrf1_mail_id, placeholder: "Mail Id", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf2_name, "JRF 2 Name" %>
+    <%= f.text_field :jrf2_name, placeholder: "JRF 2 Name", size: 120 %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf2_designation, "Designation" %>
+      <%= f.text_field :jrf2_designation, placeholder: "Designation", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf2_organizer, "Organization" %>
+      <%= f.text_field :jrf2_organizer, placeholder: "Organization", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf2_address, "Address" %>
+    <%= f.text_area :jrf2_address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf2_mobile, "Mobile Number" %>
+      <%= f.text_field :jrf2_mobile, placeholder: "Mobile Number", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf2_mail_id, "E-Mail Id" %>
+      <%= f.text_field :jrf2_mail_id, placeholder: "Mail Id", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf3_name, "JRF 3 Name" %>
+    <%= f.text_field :jrf3_name, placeholder: "JRF 3 Name", size: 120 %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf3_designation, "Designation" %>
+      <%= f.text_field :jrf3_designation, placeholder: "Designation", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf3_organizer, "Organization" %>
+      <%= f.text_field :jrf3_organizer, placeholder: "Organization", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf3_address, "Address" %>
+    <%= f.text_area :jrf3_address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf3_mobile, "Mobile Number" %>
+      <%= f.text_field :jrf3_mobile, placeholder: "Mobile Number", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf3_mail_id, "E-Mail Id" %>
+      <%= f.text_field :jrf3_mail_id, placeholder: "Mail Id", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf4_name, "JRF 4 Name" %>
+    <%= f.text_field :jrf4_name, placeholder: "JRF 4 Name", size: 120 %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf4_designation, "Designation" %>
+      <%= f.text_field :jrf4_designation, placeholder: "Designation", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf4_organizer, "Organization" %>
+      <%= f.text_field :jrf4_organizer, placeholder: "Organization", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf4_address, "Address" %>
+    <%= f.text_area :jrf4_address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf4_mobile, "Mobile Number" %>
+      <%= f.text_field :jrf4_mobile, placeholder: "Mobile Number", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf4_mail_id, "E-Mail Id" %>
+      <%= f.text_field :jrf4_mail_id, placeholder: "Mail Id", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf5_name, "JRF 5 Name" %>
+    <%= f.text_field :jrf5_name, placeholder: "JRF 5 Name", size: 120 %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf5_designation, "Designation" %>
+      <%= f.text_field :jrf5_designation, placeholder: "Designation", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf5_organizer, "Organization" %>
+      <%= f.text_field :jrf5_organizer, placeholder: "Organization", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :jrf5_address, "Address" %>
+    <%= f.text_area :jrf5_address, size: '120x30' %>
+  </div>
+
+  <div class="row">
+
+    <div class="field six columns">
+      <%= f.label :jrf5_mobile, "Mobile Number" %>
+      <%= f.text_field :jrf5_mobile, placeholder: "Mobile Number", size: 50 %>
+    </div>
+
+    <div class="field six columns">
+      <%= f.label :jrf5_mail_id, "E-Mail Id" %>
+      <%= f.text_field :jrf5_mail_id, placeholder: "Mail Id", size: 50 %>
+    </div>
+
+  </div>
+
+  <div class="actions" align="center">
+    <%= f.submit "submit", class: "button-primary" %>
+  </div>
+<% end %>

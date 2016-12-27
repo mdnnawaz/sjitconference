@@ -1,0 +1,2 @@
+json.extract! journal_detail, :id, :academic_year, :sem, :journal_name, :issn_no, :impact_factor, :journal_type, :paper_title, :1_author_name, :1_dept, :1_organization, :1_others, :2_author_name, :2_dept, :2_organization, :2_others, :vol_no, :issue_no, :page_no, :date_submitted, :date_acceptance, :date_publish, :paper_abstract, :user_id, :created_at, :updated_at
+json.url journal_detail_url(journal_detail, format: :json)

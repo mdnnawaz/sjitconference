@@ -1,0 +1,2 @@
+module JournalDetailsHelper
+end

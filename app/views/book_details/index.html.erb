@@ -1,0 +1,32 @@
+ <div class="container"> 
+  <p id="notice"><%= notice %></p>
+
+  <h1>Published Books</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Book title</th>
+        <th>Publisher name</th>
+        <th>Publisher address</th>
+        <th>Isbn</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @book_details.each do |book_detail| %>
+        <tr>
+          <td><%= book_detail.book_title %></td>
+          <td><%= book_detail.publisher_name %></td>
+          <td><%= book_detail.publisher_address %></td>
+          <td><%= book_detail.isbn %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+      <%= button_to 'New Record', new_book_detail_path, class: 'button-primary', method: 'get' %>
+    <!-- </div> -->
+</div>

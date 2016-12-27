@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Book title:</strong>
+  <%= @book_detail.book_title %>
+</p>
+
+<p>
+  <strong>One author name:</strong>
+  <%= @book_detail.one_author_name %>
+</p>
+
+<p>
+  <strong>One designation:</strong>
+  <%= @book_detail.one_designation %>
+</p>
+
+<p>
+  <strong>One organization:</strong>
+  <%= @book_detail.one_organization %>
+</p>
+
+<p>
+  <strong>Publisher name:</strong>
+  <%= @book_detail.publisher_name %>
+</p>
+
+<p>
+  <strong>Publisher address:</strong>
+  <%= @book_detail.publisher_address %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @book_detail.isbn %>
+</p>
+
+<p>
+  <strong>One publication:</strong>
+  <%= @book_detail.one_publication %>
+</p>
+
+<p>
+  <strong>Edition number:</strong>
+  <%= @book_detail.edition_number %>
+</p>
+
+<p>
+  <strong>Reprint year:</strong>
+  <%= @book_detail.reprint_year %>
+</p>
+
+<%= link_to 'Edit', edit_book_detail_path(@book_detail) %> |
+<%= link_to 'Back', book_details_path %>

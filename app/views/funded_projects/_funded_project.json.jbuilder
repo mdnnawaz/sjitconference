@@ -1,0 +1,2 @@
+json.extract! funded_project, :id, :project_title, :about_project, :funding_agency, :sub_agency, :address, :project_value, :project_submitted_date, :sanctioned_amount, :total_amount_recieved, :date_of_completion, :remarks, :created_at, :updated_at
+json.url funded_project_url(funded_project, format: :json)
