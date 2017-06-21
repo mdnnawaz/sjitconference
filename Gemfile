@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem "paperclip", "~> 5.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
-
+gem 'httparty'
 # Skeleton CSS Bolier Plate
 gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
 gem 'normalize-rails'	
