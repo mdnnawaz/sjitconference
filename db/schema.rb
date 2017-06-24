@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161226161800) do
+ActiveRecord::Schema.define(version: 20170622084146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -192,8 +192,8 @@ ActiveRecord::Schema.define(version: 20161226161800) do
     t.string   "date_publish"
     t.text     "paper_abstract"
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "paper_file_name"
     t.string   "paper_content_type"
     t.integer  "paper_file_size"
@@ -202,6 +202,8 @@ ActiveRecord::Schema.define(version: 20161226161800) do
     t.string   "file_content_type"
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
+    t.string   "page_end"
+    t.float    "impact_factor_scopus"
     t.index ["user_id"], name: "index_journal_details_on_user_id", using: :btree
   end
 
