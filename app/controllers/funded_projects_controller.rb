@@ -28,7 +28,7 @@ class FundedProjectsController < ApplicationController
     @funded_project.user_id = current_user.id
     respond_to do |format|
       if @funded_project.save
-        format.html { redirect_to root_path, notice: 'Funded project was successfully created.' }
+        format.html { redirect_to index_path, notice: 'Funded project was successfully created.' }
         format.json { render :show, status: :created, location: @funded_project }
       else
         format.html { render :new }

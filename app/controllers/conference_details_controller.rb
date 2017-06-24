@@ -29,7 +29,7 @@ class ConferenceDetailsController < ApplicationController
     @conference_detail.user_id = current_user.id
     respond_to do |format|
       if @conference_detail.save
-        format.html { redirect_to root_path, notice: 'Conference detail was successfully created.' }
+        format.html { redirect_to index_path, notice: 'Conference detail was successfully created.' }
         format.json { render :show, status: :created, location: @conference_detail }
       else
         format.html { render :new }

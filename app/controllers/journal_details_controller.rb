@@ -30,7 +30,7 @@ class JournalDetailsController < ApplicationController
     respond_to do |format|
       if @journal_detail.save
         @journal_detail.save 
-        format.html { redirect_to root_path, notice: 'Journal detail was successfully created.' }
+        format.html { redirect_to index_path, notice: 'Journal detail was successfully created.' }
         format.json { render :show, status: :created, location: @journal_detail }
       else
         format.html { render :new }
@@ -71,6 +71,6 @@ class JournalDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journal_detail_params
-      params.require(:journal_detail).permit(:academic_year, :sem, :journal_name, :issn_no, :impact_factor, :journal_type, :paper_title, :one_author_name, :one_dept, :one_organization, :one_others, :two_author_name, :two_dept, :two_organization, :two_others,:three_author_name, :three_dept, :three_organization, :three_others, :vol_no, :issue_no, :page_no, :date_submitted, :date_acceptance, :date_publish, :paper_abstract, :user_id, :paper)
+      params.require(:journal_detail).permit(:academic_year, :sem, :journal_name, :issn_no, :impact_factor, :journal_type, :paper_title, :one_author_name, :one_dept, :one_organization, :one_others, :two_author_name, :two_dept, :two_organization, :two_others,:three_author_name, :three_dept, :three_organization, :three_others, :vol_no, :issue_no, :page_no, :date_submitted, :date_acceptance, :date_publish, :paper_abstract, :user_id, :paper, :impact_factor_scopus, :page_end)
     end
 end
