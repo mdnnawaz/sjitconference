@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>St. Joseph's Institute of Technology | Research & Development </title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>St. Joseph's Institute of Technology | Research & Development </title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-  	<navbar class="primary" style="background-color:#F3F3F3">
-      <div class="row" style="background-color:#F3F3F3">
-           <center><%= image_tag "header.png" , height: "165px", width: "700px", style: 'background-color:#F3F3F3'%></center>
-      </div>
-    </navbar>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+<body>
+ <navbar class="primary" style="background-color:#F3F3F3">
+  <div class="row" style="background-color:#F3F3F3">
+   <center><%= image_tag "header.png" , height: "165px", width: "700px", style: 'background-color:#F3F3F3'%></center>
+
+ </div>
+   <% if user_signed_in? %>
+   <div style="padding-bottom: 50px;">
+   <div style="float: right;">
+     <%= button_to "Log out", destroy_user_session_path, class: "btn btn-primary", :method => :delete %>
+   </div>
+   <div style="float: right;">
+   <h4><b><%= current_user.username %></b></h4>
+   </div>
+   <% end %>
+   </div>
+ </div>
+</navbar>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+</body>
 </html>
