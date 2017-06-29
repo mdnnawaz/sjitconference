@@ -5,7 +5,7 @@ class LoginController < ApplicationController
 		if res.include? "user"
 
 			params.each do |k,v|
-				@us=params[:user]
+				@us=params[:user].downcase
 				@pw=params[:pass]
 				# @user = User.where(username: )
 			end
@@ -13,11 +13,10 @@ class LoginController < ApplicationController
 			if response.include? "staff"
 				@user = User.find_by_username(params[:user])
 				if @user.nil?
-					@user=User.new(:username => @us.upcase, :password => @pw, :password_confirmation=> @pw)
+					@user=User.new(:username => @us, :password => @pw, :password_confirmation=> @pw)
 					# @user.id=User.id
 					@user.save
 
-					puts "user #{@user.id}"
 					# after_sign_up_path_for(@user)
 					sign_in(@user)
 					sign_in @user, :bypass => true 

@@ -20,7 +20,7 @@
      <%= button_to "Log out", destroy_user_session_path, class: "btn btn-primary", :method => :delete %>
    </div>
    <div style="float: right;">
-   <h4><b><%= current_user.username %></b></h4>
+   <h4><b><%= current_user.username.upcase %></b></h4>
    </div>
    <% end %>
    </div>
