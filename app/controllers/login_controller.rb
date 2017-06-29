@@ -13,7 +13,7 @@ class LoginController < ApplicationController
 			if response.include? "staff"
 				@user = User.find_by_username(params[:user])
 				if @user.nil?
-					@user=User.new(:username => @us, :password => @pw, :password_confirmation=> @pw)
+					@user=User.new(:username => @us.upcase, :password => @pw, :password_confirmation=> @pw)
 					# @user.id=User.id
 					@user.save
 
@@ -32,7 +32,11 @@ class LoginController < ApplicationController
 			else 
 				render html: "<strong>Authentication Failed</strong>".html_safe
 			end
-
+		else
+			redirect_to index_path
 		end
-	end
+
+
+	# end
+end
 end
